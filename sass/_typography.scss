@@ -1,0 +1,21 @@
+.heading-primary {
+    line-height: 1.1;
+
+    &--first::after {
+        display: inline-block;
+        content: ' ';
+        height: .3rem;
+        width: 2.8rem;
+        background-color: #fff;
+        margin-left: 1rem;
+    }
+}
+
+.heading-secondary {
+
+}
+
+.paragraph-rotate {
+    font-family: Nanum Pen Script,cursive!important;
+    border-radius: 50%;
+}

@@ -1,0 +1,132 @@
+.toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 998;
+    border-radius: 100%;
+    background-color: var(--color-primary);
+
+    &__icon
+     {
+        &--open,
+        &--open::before,
+        &--open::after {
+        display: inline-block;
+        height: .4rem;
+        width: .4rem;
+        border-radius: 100%;
+        background-color: #fff;
+        position: fixed;
+        }
+
+        &--open::before,
+        &--open::after
+          {
+            content: '';
+            position: absolute;
+        }
+
+        &--open::before,
+        &--open::after {
+            top: 0;
+        }
+
+        &--open::before {
+            left: -.5rem;
+        }
+
+        &--open::after {
+            right: -.5rem;
+        }
+    }
+}
+
+.toggle-close {
+    
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-primary-dark);
+    border-radius: 100%;
+    z-index: 998;
+    
+    &__icon::before,
+    &__icon::after {
+        display: inline-block;
+        content: "";
+        height: 1px;
+        width: 1rem;
+        background-color: var(--color-gray-1);
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        
+    }
+
+    &__icon::before {
+        transform: rotate(135deg);
+    }
+
+    &__icon::after {
+        transform: rotate(-135deg);
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: -75%;
+    z-index: 1000;
+    background-color: var(--color-primary-light);
+    transition: all .4s;
+
+    &:target {
+        left: 0;
+    }
+
+    &__list {
+        padding: .5rem;
+        border-radius: 1rem;
+        transition: background-color .4s;
+
+        &:hover {
+            background-color: var(--color-primary-dark);
+        }
+    }
+}
+
+.nav:target + .backdrop {
+     position: fixed;
+     display: block;
+     left: 0;
+     top: 0;
+     z-index: 999;
+     background-color: rgba(0,0,0, .85);
+   
+     cursor: default;
+}
+
+.box-rotate {
+    transform: rotate(-10deg);
+    left: -2rem;
+    top: -1rem;
+    
+}
+
+// .ping {
+//     position: absolute;
+//     top: .21rem;
+//     right: -.2rem;
+// }
+
+.image {
+    background-image: url(/picture_2.jpg);
+    background-size: cover;
+    background-position: top;
+    
+}
+
+.tag {
+    top: 8px;
+    left: 8px;
+}

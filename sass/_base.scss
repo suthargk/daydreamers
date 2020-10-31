@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary-light: #6e01f2;
+    --color-primary: #5f01d0;
+    --color-primary-dark: #48019d;
+    --color-gray-1: #f7fafc;
+    --color-gray-dark-1: #a0aec0;
+
+    --plyr-color-main:  #6e01f2;
+}
+
+html {
+    // font-size: 100%;
+}
+
+body {
+    color: var(--color-gray-1);
+}
