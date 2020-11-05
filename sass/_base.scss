@@ -14,8 +14,14 @@
     --color-primary-dark: #48019d;
     --color-gray-1: #f7fafc;
     --color-gray-dark-1: #a0aec0;
+    --color-gray-dark-3: #141c3a;
 
     --plyr-color-main:  #6e01f2;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-gray-1);
 }
 
 html {
