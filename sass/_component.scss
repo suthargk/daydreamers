@@ -50,7 +50,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary-darker);
     border-radius: 100%;
     z-index: 998;
     
@@ -94,7 +94,7 @@
         transition: background-color .4s;
 
         &:hover {
-            background-color: var(--color-primary-dark);
+            background-color: var(--color-primary-darker);
         }
     }
 }
@@ -110,6 +110,9 @@
     top: 0;
     z-index: 999;
     background-color: rgba(0,0,0, .85);
+    // backdrop-filter: blur(5px);
+    // -webkit-backdrop-filter: blur(5px);
+    
     cursor: default;
 }
 
@@ -160,7 +163,7 @@
     
 
     &--active {
-        background-color: var(--color-primary);
+        background-color: var(--color-primary-darker);
     }
 
     &:active,
@@ -178,19 +181,29 @@
 }
 
 .btn {
-    border: 2px solid var(--color-primary-dark);
+    border: 2px solid var(--color-primary);
     border-radius: 130px;
     transition: all .4s;
 
-    &:hover,
-    &:active {
-        border: 2px solid var(--color-primary);
-        background-color: var(--color-primary);
+    &--medium {
+        color: var(--color-primary);
     }
 
-    &:active {
-        transform: translateY(2px);
+    &--medium,
+    &--large {
+
+        &:hover,
+        &:active {
+            border: 2px solid var(--color-primary);
+            background-color: var(--color-primary);
+            color: var(--color-gray-1);
+            }
+
+        &:active {
+            transform: translateY(2px);
+        }
     }
+
 }
 
 .opacity {
@@ -205,4 +218,14 @@
         color: var(--color-primary);
         background-color: var(--color-gray-1);
     }
+}
+
+.side-pattern {
+background-color: transparent;
+background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23cbd5e0' fill-opacity='0.35' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
