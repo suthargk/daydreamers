@@ -1,126 +1,121 @@
 .toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1.1rem;
-    z-index: 998;
-    border-radius: 100%;
-    background-color: var(--color-primary);
+  position: fixed;
+  top: 1rem;
+  right: 1.1rem;
+  z-index: 998;
+  border-radius: 100%;
+  background-color: var(--color-primary);
 
-    &:focus {
-        outline: none;
+  &:focus {
+    outline: none;
+  }
+
+  &__icon {
+    &--open,
+    &--open::before,
+    &--open::after {
+      display: inline-block;
+      height: 0.4rem;
+      width: 0.4rem;
+      border-radius: 100%;
+      background-color: #fff;
+      position: fixed;
     }
 
-    &__icon
-     {
-        &--open,
-        &--open::before,
-        &--open::after {
-        display: inline-block;
-        height: .4rem;
-        width: .4rem;
-        border-radius: 100%;
-        background-color: #fff;
-        position: fixed;
-        }
-
-        &--open::before,
-        &--open::after
-          {
-            content: '';
-            position: absolute;
-        }
-
-        &--open::before,
-        &--open::after {
-            top: 0;
-        }
-
-        &--open::before {
-            left: -.5rem;
-        }
-
-        &--open::after {
-            right: -.5rem;
-        }
+    &--open::before,
+    &--open::after {
+      content: "";
+      position: absolute;
     }
+
+    &--open::before,
+    &--open::after {
+      top: 0;
+    }
+
+    &--open::before {
+      left: -0.5rem;
+    }
+
+    &--open::after {
+      right: -0.5rem;
+    }
+  }
 }
 
 .toggle-close {
-    
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--color-primary-darker);
+  border-radius: 100%;
+  z-index: 998;
+
+  &__icon::before,
+  &__icon::after {
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 1rem;
+    background-color: var(--color-gray-1);
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: var(--color-primary-darker);
-    border-radius: 100%;
-    z-index: 998;
-    
-    &__icon::before,
-    &__icon::after {
-        display: inline-block;
-        content: "";
-        height: 1px;
-        width: 1rem;
-        background-color: var(--color-gray-1);
-        position: absolute;
-        top: 50%;
-        left: 25%;
-        
-    }
+    top: 50%;
+    left: 25%;
+  }
 
-    &__icon::before {
-        transform: rotate(135deg);
-    }
+  &__icon::before {
+    transform: rotate(135deg);
+  }
 
-    &__icon::after {
-        transform: rotate(-135deg);
-    }
+  &__icon::after {
+    transform: rotate(-135deg);
+  }
 }
 
 .nav {
-    position: fixed;
-    top: 0;
-    left: -75%;
-    z-index: 1000;
-    background-color: var(--color-primary-light);
-    transition: all .4s;
+  position: fixed;
+  top: 0;
+  left: -75%;
+  z-index: 1000;
+  background-color: var(--color-primary-light);
+  transition: all 0.4s;
 
-    &:target {
-        left: 0;
+  &:target {
+    left: 0;
+  }
+
+  &__list {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: background-color 0.4s;
+
+    &:hover {
+      background-color: var(--color-primary-darker);
     }
-
-    &__list {
-        padding: .5rem;
-        border-radius: 1rem;
-        transition: background-color .4s;
-
-        &:hover {
-            background-color: var(--color-primary-darker);
-        }
-    }
+  }
 }
 
 .nav:target {
-    transition: all .4s;
+  transition: all 0.4s;
 }
 
 .nav:target + .backdrop {
-    position: fixed;
-    display: block;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    background-color: rgba(0,0,0, .85);
-    // backdrop-filter: blur(5px);
-    // -webkit-backdrop-filter: blur(5px);
-    
-    cursor: default;
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.85);
+  // backdrop-filter: blur(5px);
+  // -webkit-backdrop-filter: blur(5px);
+
+  cursor: default;
 }
 
 .box-rotate {
-    transform: rotate(-10deg);
-    left: -2rem;
-    top: -1rem;
-    
+  transform: rotate(-10deg);
+  left: -2rem;
+  top: -1rem;
 }
 
 // .ping {
@@ -130,102 +125,104 @@
 // }
 
 .image {
-    background-image: url(/picture_7.jpg);
-    background-size: cover;
-    background-position: top;
-    transition: all .4s;
-
+  background-image: url(/picture_7.jpg);
+  background-size: cover;
+  background-position: top;
+  transition: all 0.4s;
 }
 
 .tag {
-    top: 8px;
+  top: 8px;
 }
 
 .heart-check {
-    
-    :focus {
-        outline: none;
-    }
+  :focus {
+    outline: none;
+  }
 
-    &:checked + label {
-        color: #e53e3e;
-        transform: scale(1.3);
-    }
+  &:checked + label {
+    color: #e53e3e;
+    transform: scale(1.3);
+  }
 }
 
 .vivid {
-        filter: drop-shadow(0 0 1rem #f0eeee);
+  filter: drop-shadow(0 0 1rem #f0eeee);
 }
 
-
 .item {
-    transition: background-color .3s;
-    
+  transition: background-color 0.3s;
 
-    &--active {
-        background-color: var(--color-primary-darker);
-    }
+  &--active {
+    background-color: var(--color-primary-darker);
+  }
 
-    &:active,
-    &:hover {
-        background-color: var(--color-primary);
-        box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-    }
-    &:focus {
-        outline: none;
-    }
+  &:active,
+  &:hover {
+    background-color: var(--color-primary-darker);
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .box {
-    background-color: var(--color-gray-dark-3);
+  background-color: var(--color-gray-dark-3);
 }
 
 .btn {
-    border: 2px solid var(--color-primary);
-    border-radius: 130px;
-    transition: all .4s;
+  border: 2px solid var(--color-primary);
+  border-radius: 130px;
+  transition: all 0.4s;
 
-    &--medium {
-        color: var(--color-primary);
+  &--medium {
+    color: var(--color-primary);
+  }
+
+  &--medium,
+  &--large {
+    &:hover,
+    &:active {
+      border: 2px solid var(--color-primary);
+      background-color: var(--color-primary);
+      color: var(--color-gray-1);
     }
 
-    &--medium,
-    &--large {
-
-        &:hover,
-        &:active {
-            border: 2px solid var(--color-primary);
-            background-color: var(--color-primary);
-            color: var(--color-gray-1);
-            }
-
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+      transform: translateY(2px);
     }
-
+  }
 }
 
 .opacity {
-    opacity: .7;
+  opacity: 0.7;
 }
 
 .svg-fill {
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    transition: all .3s;
-    
-    &:hover {
-        color: var(--color-primary);
-        background-color: var(--color-gray-1);
-    }
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--color-primary);
+    background-color: var(--color-gray-1);
+  }
 }
 
 .side-pattern {
-background-color: transparent;
-background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23cbd5e0' fill-opacity='0.35' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23cbd5e0' fill-opacity='0.35' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .rotate {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.aspect-box {
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    width: 100%;
+  }
 }
