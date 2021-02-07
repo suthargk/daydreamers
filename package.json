@@ -1,15 +1,22 @@
 {
-  "name": "daydreamers",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "compile-sass": "node-sass sass/main.scss  css/style.css -w"
-  },
-  "author": "Gaurav",
-  "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.14.1",
-    "sass": "^1.27.0"
-  }
+    "autoprefixer": "^10.2.4",
+    "cssnano": "^4.1.10",
+    "onchange": "^7.1.0",
+    "postcss": "^8.2.5",
+    "postcss-import": "^14.0.0",
+    "tailwindcss": "^2.0.2"
+  },
+  "name": "DayDreamers",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build": "NODE_ENV=production tailwind  build css/tailwind.css -o public/build/style.css",
+    "dev": "tailwind build css/tailwind.css -o public/build/style.css",
+    "dev-watch": "onchange 'tailwind.config.js' 'css/tailwind.css' -- npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
