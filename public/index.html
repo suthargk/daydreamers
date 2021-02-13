@@ -80,22 +80,52 @@
       </div>
     </section>
 
-    <section class="h-screen section-event-card">
+    <section class="mb-16 section-event-card">
       <h2
         class="mb-10 text-2xl font-bold tracking-wider text-center text-gray-900 uppercase lg:text-3xl dark:text-gray-50"
       >
         Upcoming Events
       </h2>
       <div class="relative w-full">
-        <button class="absolute w-10 h-10 bg-white rounded-full shadow-lg left-arrow text-primary left-12 top-1/3 focus:outline-none">
+        <button class="absolute z-20 w-10 h-10 bg-white rounded-full shadow-lg dark:text-white dark:bg-gray-600 left-arrow text-primary left-7 top-1/3 focus:outline-none">
           <i class="inline-block w-full mx-auto gg-arrow-left"></i>
         </button>
-        <button class="absolute w-10 h-10 bg-white rounded-full shadow-lg right-arrow text-primary right-12 top-1/3 focus:outline-none">
+        <button class="absolute z-20 w-10 h-10 bg-white rounded-full shadow-lg disable dark:text-white dark:bg-gray-600 right-arrow text-primary right-7 top-1/3 focus:outline-none">
           <i class="inline-block w-full mx-auto gg-arrow-right"></i>
         </button>
-        <a
-          href="#"
-          class="block w-3/4 mx-auto overflow-hidden transition-all duration-300 ease-in-out rounded shadow-lg event-card zoom lg:w-1/4 dark:bg-gray-700"
+        <div class="relative w-4/5 mx-auto my-0 overflow-hidden h-72 lg:flex lg:justify-center lg:items-center">
+         
+          <a
+            href="#" data-label="1"
+            class="absolute top-0 w-full mx-auto overflow-hidden transition-all duration-300 ease-in-out rounded shadow-md lg:mx-10 top-custom event-card zoom lg:w-1/3 dark:bg-gray-700"
+          >
+            
+            <div class="relative w-full overflow-hidden">
+              <div
+              class="absolute z-10 px-3 py-1 text-xs font-semibold bg-white rounded w-14 top-2 left-2 vivid"
+            >
+              ₹249
+            </div>
+              <img src="img/picture_1.jpg" draggable="false" class="object-cover object-top w-full h-40 transition-all duration-300 ease-in-out"></img>
+            </div>
+            <div class="px-4 pt-4 pb-6 dark:text-gray-50">
+              <span
+                class="block text-sm font-semibold leading-loose tracking-wide"
+                >Takhatgarh &mdash; Udaan Festival 2</span
+              >
+              <span
+                class="block mb-1 text-xs font-medium text-gray-600 dark:text-gray-100"
+                >September 2 | 8:00 PM - 10:00 PM</span
+              >
+              <span
+                class="block text-xs font-medium text-gray-700 dark:text-gray-50"
+                >Takhatgarh, India</span
+              >
+            </div>
+          </a>
+          <!-- <a
+          href="#" data-label="1"
+          class="absolute top-0 w-full mx-auto overflow-hidden transition-all duration-300 ease-in-out rounded shadow-md lg:mx-10 top-custom event-card zoom lg:w-1/3 dark:bg-gray-700"
         >
           
           <div class="relative w-full overflow-hidden">
@@ -120,9 +150,30 @@
               >Takhatgarh, India</span
             >
           </div>
-        </a>
+        </a> -->
+        </div>
       </div>
     </section>
+    <section class="w-full section-person">
+      <div class="">
+        <h2
+        class="mb-10 text-2xl font-bold tracking-wider text-center text-gray-900 uppercase lg:text-3xl dark:text-gray-50"
+      >
+        What people say
+      </h2>
+      <div class="flex flex-col items-center justify-center w-4/5 mx-auto">
+        <div class="mb-6">
+          <img src="img/user_1.jpg" class="w-16 h-16 rounded-full" alt="User 1">
+        </div>
+        <p class="mb-6 leading-normal tracking-wide text-center">pleasure to work with and we look forward to working with him again. He’s definitely the kind of designer you can trust with a project from start to finish</p>
+        <div class="text-center">
+          <h3 class="text-xl font-bold">Allen Heich</h3>
+          <span class="text-lg tracking-wide">Singer</span>
+        </div>
+      </div>
+      </div>
+    </section>
+    <h1 class="font-bold text-8xl">Hello world</h1>
     <script defer src="build/script.js"></script>
   </body>
 </html>
