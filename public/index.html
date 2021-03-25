@@ -12,6 +12,14 @@
 
     <!-- css files -->
     <link rel="stylesheet" href="build/style.css" />
+    
+    <!-- plyr.io -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+
+    <!-- owl carousel -->
+    <!-- <link rel="stylesheet" href="build/owlcarousel/owl.carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="build/owlcarousel/owl.theme.default.min.css"> -->
+
     <!-- css.gg -->
     <link href="https://css.gg/css" rel="stylesheet" />
   </head>
@@ -19,7 +27,43 @@
     <div
       class="fixed z-50 block w-full bg-white rounded-b-sm shadow-lg dark:bg-gray-800 h-14 md:hidden lg:hidden"
     ></div>
-    <section class="relative px-3 mb-20 section-genre">
+    <header class="h-screen bg-center bg-no-repeat bg-cover bg-hero">
+      <nav class="">
+        <ul>
+          <li></li>
+        </ul>
+      </nav>
+      <div class="fixed flex flex-row items-center w-1/6 right-8 top-4">
+        <a href="#" class="px-4 py-2 font-light tracking-wider text-center text-gray-900 uppercase bg-white shadow-lg vivid">buy tickets</a>
+        <a href="#" class="ml-8 text-white"><svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 6.9834C7.44772 6.9834 7 7.43111 7 7.9834C7 8.53568 7.44772 8.9834 8 8.9834H16C16.5523 8.9834 17 8.53568 17 7.9834C17 7.43111 16.5523 6.9834 16 6.9834H8Z"
+            fill="currentColor"
+          />
+          <path
+            d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z"
+            fill="currentColor"
+          />
+          <path
+            d="M8 15.017C7.44772 15.017 7 15.4647 7 16.017C7 16.5693 7.44772 17.017 8 17.017H16C16.5523 17.017 17 16.5693 17 16.017C17 15.4647 16.5523 15.017 16 15.017H8Z"
+            fill="currentColor"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+            fill="currentColor"
+          />
+        </svg></a>
+      </div>
+    </header>
+    <section class="relative px-3 mb-20 pt-14 lg:pt-20 section-genre">
       <h2
         class="mb-10 text-2xl font-bold tracking-wider text-center text-gray-900 uppercase lg:text-3xl dark:text-gray-50"
       >
@@ -35,7 +79,7 @@
           >
             <img src="svg/wedding.svg" alt="wedding" class="w-10 h-10" />
             <span class="inline-block text-base leading-loose tracking-wide"
-              >Wedding</span
+              >Marriage</span
             >
           </a>
           <a
@@ -44,7 +88,7 @@
           >
             <img src="svg/singing.svg" alt="wedding" class="w-10 h-10" />
             <span class="inline-block text-base leading-loose tracking-wide"
-              >Wedding</span
+              >Singing</span
             >
           </a>
           <a
@@ -53,18 +97,18 @@
           >
             <img src="svg/couple.svg" alt="wedding" class="w-10 h-10" />
             <span class="inline-block text-base leading-loose tracking-wide"
-              >Wedding</span
+              >Dancing</span
             >
           </a>
-          <a
+          <!-- <a
             href="#"
             class="flex flex-row items-center justify-center px-2 py-4 transition duration-300 ease-in-out border border-gray-100 rounded-lg dark:bg-gray-900 dark:border-gray-800 dark:hover:bg-gray-800 dark:text-gray-50 focus:outline-none hover:shadow-inner hover:bg-gray-100"
           >
             <img src="svg/party.svg" alt="wedding" class="w-10 h-10" />
             <span class="inline-block text-base leading-loose tracking-wide"
-              >Wedding</span
+              >Party</span
             >
-          </a>
+          </a> -->
         </div>
         <div class="mx-auto my-0 text-center">
           <a href="#" class="inline-block active:translate-y-3"
@@ -87,14 +131,14 @@
         Upcoming Events
       </h2>
       <div class="relative w-full">
-        <button class="absolute z-20 w-10 h-10 bg-white rounded-full shadow-lg dark:text-white dark:bg-gray-600 left-arrow text-primary left-7 top-1/3 focus:outline-none">
+        <!-- <button class="absolute z-20 w-10 h-10 bg-white rounded-full shadow-lg dark:text-white dark:bg-gray-600 left-arrow text-primary left-7 top-1/3 focus:outline-none">
           <i class="inline-block w-full mx-auto gg-arrow-left"></i>
         </button>
         <button class="absolute z-20 w-10 h-10 bg-white rounded-full shadow-lg disable dark:text-white dark:bg-gray-600 right-arrow text-primary right-7 top-1/3 focus:outline-none">
           <i class="inline-block w-full mx-auto gg-arrow-right"></i>
-        </button>
+        </button> -->
         <div class="relative w-4/5 mx-auto my-0 overflow-hidden h-72 lg:flex lg:justify-center lg:items-center">
-         
+    
           <a
             href="#" data-label="1"
             class="absolute top-0 w-full mx-auto overflow-hidden transition-all duration-300 ease-in-out rounded shadow-md lg:mx-10 top-custom event-card zoom lg:w-1/3 dark:bg-gray-700"
@@ -123,57 +167,151 @@
               >
             </div>
           </a>
-          <!-- <a
-          href="#" data-label="1"
-          class="absolute top-0 w-full mx-auto overflow-hidden transition-all duration-300 ease-in-out rounded shadow-md lg:mx-10 top-custom event-card zoom lg:w-1/3 dark:bg-gray-700"
-        >
-          
-          <div class="relative w-full overflow-hidden">
-            <div
-            class="absolute z-10 px-3 py-1 text-xs font-semibold bg-white rounded w-14 top-2 left-2 vivid"
-          >
-            ₹249
-          </div>
-            <img src="img/picture_1.jpg" draggable="false" class="object-cover object-top w-full h-40 transition-all duration-300 ease-in-out"></img>
-          </div>
-          <div class="px-4 pt-4 pb-6 dark:text-gray-50">
-            <span
-              class="block text-sm font-semibold leading-loose tracking-wide"
-              >Takhatgarh &mdash; Udaan Festival 2</span
-            >
-            <span
-              class="block mb-1 text-xs font-medium text-gray-600 dark:text-gray-100"
-              >September 2 | 8:00 PM - 10:00 PM</span
-            >
-            <span
-              class="block text-xs font-medium text-gray-700 dark:text-gray-50"
-              >Takhatgarh, India</span
-            >
-          </div>
-        </a> -->
         </div>
       </div>
     </section>
-    <section class="w-full section-person">
+    <section class="p-3 pb-10 bg-primaryLight dark:bg-primary lg:px-6 lg:pb-16 lg:pt-8 text-gray-50">
+
+      <h2 class="mt-4 mb-5 text-2xl font-bold tracking-wider text-center uppercase lg:mt-6 lg:mb-16 heading-secondary">We Make Memorable Moments</h2>
+  
+      <div class="relative w-full p-1 lg:w-2/5 lg:mx-auto">
+          <div class="absolute left-1 -bottom-5 lg:transform lg:-top-5 lg:-left-2 lg:-rotate-12 lg:block">
+              <p class="text-base leading-none font-nanum">Day Dreamers</p>
+          </div>
+          <div id="player" class="plyr__video-embed" data-plyr-provider="youtube" data-plyr-embed-id="_Ans3UIsjvk"></div>
+
+      </div>
+  </section>
+  
+    <section class="w-full py-16 mb-12 dark:text-gray-50">
       <div class="">
         <h2
-        class="mb-10 text-2xl font-bold tracking-wider text-center text-gray-900 uppercase lg:text-3xl dark:text-gray-50"
+        class="mb-10 text-2xl font-bold tracking-wider text-center text-gray-900 uppercase dark:text-gray-50 lg:text-3xl"
       >
         What people say
       </h2>
-      <div class="flex flex-col items-center justify-center w-4/5 mx-auto">
+      <div class="flex flex-col items-center justify-center w-4/5 mx-auto lg:w-1/2">
         <div class="mb-6">
-          <img src="img/user_1.jpg" class="w-16 h-16 rounded-full" alt="User 1">
+          <img src="img/pascal.png" class="w-16 h-16 rounded-full" alt="User 1">
         </div>
-        <p class="mb-6 leading-normal tracking-wide text-center">pleasure to work with and we look forward to working with him again. He’s definitely the kind of designer you can trust with a project from start to finish</p>
+        <p class="mb-6 text-lg leading-normal tracking-wide text-center text-gray-600 dark:text-gray-200">&quot;pleasure to work with and we look forward to working with him again. He’s definitely the kind of designer you can trust with a project from start to finish.&rdquo;</p>
         <div class="text-center">
-          <h3 class="text-xl font-bold">Allen Heich</h3>
-          <span class="text-lg tracking-wide">Singer</span>
+          <h3 class="text-xl font-semibold">Allen Heich</h3>
+          <span class="text-base font-light tracking-widest">Singer</span>
+        </div>
+        <div class="flex flex-row justify-center w-1/4 mt-6 lg:mt-10">
+          <button class="w-4 h-4 mr-2 border-2 rounded-full border-gray-150 focus:outline-none active-slider-button"></button>
+          <button class="w-4 h-4 mr-2 border-2 rounded-full border-gray-150 focus:outline-none"></button>
         </div>
       </div>
+      </div>
+      <div class="mx-auto mt-16 text-center">
+        <a href="#" class="inline-block active:translate-y-3"
+          ><div
+            class="flex flex-row justify-center py-2 font-medium transition duration-300 ease-in-out border-2 shadow px-7 btn-more text-primary dark:text-white dark:hover:bg-primaryLight dark:hover:border-primaryLight dark:bg-primary hover:translate-y-2text-primary rounded-3xl border-primary hover:bg-primary hover:text-gray-50"
+          >
+            See more testimonials
+            <i
+              class="self-end ml-1 transition-transform duration-300 ease-in-out gg-arrow-right"
+            ></i></div
+        ></a>
       </div>
     </section>
-    <h1 class="font-bold text-8xl">Hello world</h1>
+    
+    <section class="w-full py-16 mb-20 dark:text-gray-50">
+      <div class="flex flex-col items-center justify-center overflow-hidden lg:items-start lg:flex-row ">
+        <div class="w-11/12 mb-6 lg:w-1/4"><img src="img/founder.jpg" class="rounded lg:w-4/5" alt="Founder"></div>
+        <div class="flex flex-col items-center w-11/12 text-base leading-relaxed tracking-wide text-justify text-gray-600 dark:text-gray-200 lg:w-1/2">
+          <span class="self-start mb-8 text-gray-600 lg:mb-20 dark:text-gray-50">Transform your business processes and physical operations through autonomous arficial intelligence systems. 
+            In this summit, we look at how to improve the interpretation of events and technology, to enable the confidence 
+            levels of decision making even to the point of automation. In contexts where physical operations are involved, 
+            we look at how to improve efficiency, accuracy, and safely when operating at scale.
+          </span>
+          <div class="flex flex-col items-center lg:self-end">
+            <span class="mb-2 text-xl font-light tracking-wider uppercase">Arjun Suthar</span>
+            <span class="mb-1 text-sm tracking-widest uppercase">founder</span>
+            <span class="text-gray-800 font-nanum dark:text-white">Day Dreamers</span>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <section class="w-full px-16 pt-10 pb-24 bg-gray-800 lg:pb-12 dark:text-gray-50">
+      <div class="grid grid-cols-3 gap-2 lg:gap-20 lg:grid-cols-6 auto-rows-auto">
+        <div class="">
+          <img src="img/sponsor-1.png" alt="sponsor-1">
+        </div>
+        <div class="">
+          <img src="img/sponsor-2.png" alt="sponsor-2">
+        </div>
+        <div class="">
+          <img src="img/sponsor-3.png" alt="sponsor-3">
+        </div>
+        <div class="">
+          <img src="img/sponsor-4.png" alt="sponsor-4">
+        </div>
+        <div class="">
+          <img src="img/sponsor-1.png" alt="sponsor-5">
+        </div>
+        <div class="">
+          <img src="img/sponsor-1.png" alt="sponsor-1">
+        </div>
+        
+      </div>
+    </section>
+    <footer class="py-16 bg-primaryLight dark:bg-primary">
+      <div class="flex flex-col items-center justify-center w-4/5 p-8 mx-auto -mt-32 tracking-wide shadow-xl dark:bg-gray-700 lg:-mt-28 lg:flex-row lg:justify-evenly rounded-2xl bg-darkGrayBlue text-gray-50">
+        <h3 class="text-2xl font-semibold lg:text-3xl">Plan an event</h3>
+        <span class="mt-6 text-sm leading-relaxed text-center lg:w-2/6 lg:mt-0">We walk our clients through the event planning and design process to create a successful event.</span>
+        <a href="#" class="mt-8 lg:mt-0"
+            ><div
+              class="flex flex-row justify-center py-2 font-medium transition duration-300 ease-in-out border-2 shadow px-7 btn-more dark:text-gray-50 dark:hover:bg-gray-50 dark:hover:border-gray-50 dark:bg-transparent hover:translate-y-2 rounded-3xl border-gray-50 hover:bg-gray-50 hover:border-gray-50 text-gray-50 hover:text-primaryLight dark:hover:text-gray-900"
+            >
+              Let's do this
+              <i
+                class="self-end ml-1 transition-transform duration-300 ease-in-out gg-arrow-right"
+              ></i></div
+          ></a>
+      </div>
+      <div class="flex flex-col items-center justify-center mt-24">
+        <div class="mb-6">
+          <img class="h-32 w-28" src="img/logo-white1.png" alt="Day Dreamers Logo">
+        </div>
+        <span class="text-xl tracking-wide text-center opacity-70 text-gray-50">We make memorable moments.</span>
+        <ul class="flex flex-row items-center w-3/5 mt-10 md:w-1/3 lg:w-1/4 justify-evenly text-gray-50">
+          <li><a href="https://www.instagram.com/daydreamers_event" target="_blank" class="flex flex-row items-center justify-center w-12 h-12 transition-colors duration-300 border-2 border-gray-300 rounded-full hover:bg-gray-50 hover:border-gray-50 hover:text-primaryLight border-opacity-40"><i class="gg-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/DayDreamersEvents.in" target="_blank" class="flex flex-row items-center justify-center w-12 h-12 transition-colors duration-300 border-2 border-gray-300 rounded-full hover:bg-gray-50 hover:border-gray-50 hover:text-primaryLight border-opacity-40"><i class="gg-facebook"></i></a></li>
+          <li><a href="https://www.twitter.com/daydreamers_event" target="_blank" class="flex flex-row items-center justify-center w-12 h-12 transition-colors duration-300 border-2 border-gray-300 rounded-full hover:bg-gray-50 hover:border-gray-50 hover:text-primaryLight border-opacity-40"><i class="gg-twitter"></i></a></li>
+          <li><a href="https://wa.me/+919001156087" class="flex flex-row items-center justify-center w-12 h-12 transition-colors duration-300 border-2 border-gray-300 rounded-full hover:bg-gray-50 hover:border-gray-50 hover:text-primaryLight border-opacity-40"><svg class="w-5 h-5" viewBox="0 0 500 500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M345.833 291.669C341.667 289.585 314.583 277.085 310.417 275.002C306.25 272.919 302.083 272.919 297.917
+            277.085C293.75 281.252 285.417 293.752 281.25 297.919C279.167 302.085 275 302.085 270.833 300.002C256.25 293.752
+            241.667 285.419 229.167 275.002C218.75 264.585 208.333 252.085 200 239.585C197.917 235.419 200 231.252 202.083 229.169C204.167
+            227.085 206.25 222.919 210.417 220.835C212.5 218.752 214.583 214.585 214.583 212.502C216.667 210.419 216.667 206.252 214.583 204.169C212.5
+            202.085 202.083 177.085 197.917 166.669C195.833 152.085 191.667 152.085 187.5 152.085C185.417 152.085 181.25 152.085 177.083 152.085C172.917
+            152.085 166.667 156.252 164.583 158.335C152.083 170.835 145.833 185.419 145.833 202.085C147.917 220.835 154.167 239.585 166.667 256.252C189.583
+            289.585 218.75 316.669 254.167 333.335C264.583 337.502 272.917 341.669 283.333 343.752C293.75 347.919 304.167 347.919 316.667 345.835C331.25 343.752 343.75
+            333.335 352.083 320.835C356.25 312.502 356.25 304.169 354.167 295.835C354.167 295.835 350 293.752 345.833 291.669ZM397.917 102.085C316.667 20.8352 185.417 20.8352
+            104.167 102.085C37.4998 168.752 24.9998 270.835 70.8332 352.085L41.6665 458.335L152.083 429.169C183.333 445.835 216.667 454.169 250 454.169C364.583 454.169 456.25 362.502
+            456.25 247.919C458.333 193.752 435.417 141.669 397.917 102.085ZM341.667 393.752C314.583 410.419 283.333 420.835 250 420.835C218.75 420.835 189.583 412.502 162.5 397.919L156.25
+            393.752L91.6665 410.419L108.333 347.919L104.167 341.669C54.1665 258.335 79.1665 154.169 160.417 102.085C241.667 50.0019 345.833 77.0852 395.833 156.252C445.833 237.502 422.917
+            343.752 341.667 393.752Z"></path>
+        </svg></a></li>
+          <li><a href="https://www.youtube.com/channel/UCRxswDjeH1QDCn4IVGqsrqg/" target="_blank" class="flex flex-row items-center justify-center w-12 h-12 transition-colors duration-300 border-2 border-gray-300 rounded-full hover:bg-gray-50 hover:border-gray-50 hover:text-primaryLight border-opacity-40"><i class="gg-youtube"></i></a></li>
+        </ul>
+        <div class="mt-8 text-sm text-gray-50">
+          <span class=" opacity-70">Handcrafted with </span>
+          <a href="https://twitter.com/suthargk" target="_blank" class="tracking-wide opacity-90">Gaurav Suthar</a>
+          <span class="text-xs lg:bg-white">&nbsp;🦁&nbsp;</span>
+        </div>
+      </div>
+
+    </footer>
     <script defer src="build/script.js"></script>
+    <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
+    <script>
+      const player = new Plyr("#player", {});
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="build/owlcarousel/owl.carousel.min.js"></script> -->
   </body>
 </html>
