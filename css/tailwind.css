@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --lightColor: #6e01f2;
+}
+
 .primary-border-color {
   @apply border-primary;
 }
@@ -88,3 +92,25 @@
 
   --plyr-color-main: #6e01f2;
 } */
+.nav-link::before {
+  content: "";
+  display: block;
+  width: 1%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.nav-link:hover::before {
+  border: 1px solid var(--lightColor);
+  width: 50%;
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.image-filter {
+  filter: blur(10px);
+}
