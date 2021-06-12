@@ -1,8 +1,9 @@
 module.exports = {
-  purge: {
-    mode: "layers",
-    content: ["./public/*.html"],
-  },
+  purge: [
+    "./public/*.html",
+    // mode: "layers",
+    // content: ["./public/*.html"],
+  ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
@@ -16,7 +17,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "event-card-image": "url('/public/img/picture_1.jpg')",
-        // "hero-image": "url('/public/img/hero.jpg')",
+        "hero-image": "url('/public/img/hero.jpg')",
       }),
     },
   },
