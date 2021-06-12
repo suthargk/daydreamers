@@ -12,7 +12,7 @@ const navMob = document.querySelector(".nav-mob");
 const hamburger = document.querySelector(".hamburger");
 const close = document.querySelector(".close");
 const root = document.querySelector(":root");
-const categories = document.querySelector(".categories");
+
 const themeToggleBtnDesktop = document.getElementById(
   "theme-toggle-btn-desktop"
 );
@@ -176,50 +176,3 @@ allSections.forEach((section) => {
 
 sectionObserver.observe(footer);
 footer.classList.add("opacity-0", "transform", "translate-y-28");
-
-const categoryLeft = document.querySelector(".catergory-left");
-const categoryRight = document.querySelector(".catergory-right");
-
-if (categories.scrollLeft === 0) categoryLeft.classList.add("text-gray-400");
-
-const scrollLeft = function () {
-  if (categories.scrollLeft === 0) {
-    categoryLeft.classList.add("text-gray-400");
-    categoryLeft.classList.remove("text-gray-800");
-  }
-  categoryRight.classList.add("text-gray-800");
-  categoryRight.classList.remove("text-gray-400");
-};
-
-const scrollRight = function () {
-  const calcScroll = Math.trunc(
-    categories.scrollWidth - categories.getBoundingClientRect().width
-  );
-  if (
-    calcScroll === categories.scrollLeft ||
-    calcScroll === categories.scrollLeft + 1
-  ) {
-    categoryRight.classList.add("text-gray-400");
-    categoryRight.classList.remove("text-gray-800");
-  }
-  categoryLeft.classList.add("text-gray-800");
-  categoryLeft.classList.remove("text-gray-400");
-};
-
-categories.addEventListener("scroll", function () {
-  scrollLeft();
-  scrollRight();
-});
-
-categoryLeft.addEventListener("click", function (e) {
-  e.preventDefault();
-  // console.log(categories.scrollLeft);
-  scrollLeft();
-  categories.scrollLeft -= 200;
-});
-
-categoryRight.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollRight();
-  categories.scrollLeft += 200;
-});
