@@ -1,5 +1,5 @@
 const cssnano = require("cssnano");
-console.log(process.env.NODE_ENV);
+
 module.exports = {
   plugins: {
     "@tailwindcss/jit": {},
