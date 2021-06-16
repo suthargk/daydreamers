@@ -1,18 +1,17 @@
-const stickyNav = document.querySelector(".sticky-nav");
-const stickyMob = document.querySelector(".stick-mobile");
-const hamburger = document.querySelector(".hamburger");
-const close = document.querySelector(".close");
-const ticketBtn = document.querySelector(".ticket");
-const ticketBtnMob = document.querySelector(".ticket-mobile");
-const lightDesktop = document.querySelector(".light-toggle-desktop");
-const darkDesktop = document.querySelector(".dark-toggle-desktop");
-const lightMob = document.querySelector(".light-toggle-mob");
-const darkMob = document.querySelector(".dark-toggle-mob");
-const navMob = document.querySelector(".nav-mob");
+export const stickyNav = document.querySelector(".sticky-nav");
+export const stickyMob = document.querySelector(".stick-mobile");
+export const hamburger = document.querySelector(".hamburger");
+export const close = document.querySelector(".close");
+export const ticketBtn = document.querySelector(".ticket");
+export const ticketBtnMob = document.querySelector(".ticket-mobile");
+export const lightDesktop = document.querySelector(".light-toggle-desktop");
+export const darkDesktop = document.querySelector(".dark-toggle-desktop");
+export const lightMob = document.querySelector(".light-toggle-mob");
+export const darkMob = document.querySelector(".dark-toggle-mob");
+export const navMob = document.querySelector(".nav-mob");
 const root = document.querySelector(":root");
 
 export function stickyFunc(type, targetElement, btn = undefined) {
-  console.log(type, targetElement, btn);
   const stickyNavFunc = function (entries, observer) {
     const [entry] = entries;
     if (!entry.isIntersecting) {

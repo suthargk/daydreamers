@@ -476,6 +476,9 @@ video {
 .top-1\/4{
 	top: 25%;
 }
+.left-1\/2{
+	left: 50%;
+}
 .top-0{
 	top: 0px;
 }
@@ -636,9 +639,6 @@ video {
 .h-16{
 	height: 4rem;
 }
-.h-2{
-	height: 0.5rem;
-}
 .h-20{
 	height: 5rem;
 }
@@ -650,6 +650,9 @@ video {
 }
 .h-12{
 	height: 3rem;
+}
+.h-2{
+	height: 0.5rem;
 }
 .h-72{
 	height: 18rem;
@@ -675,14 +678,8 @@ video {
 .w-full{
 	width: 100%;
 }
-.w-1\/5{
-	width: 20%;
-}
 .w-auto{
 	width: auto;
-}
-.w-2\/5{
-	width: 40%;
 }
 .w-36{
 	width: 9rem;
@@ -726,6 +723,9 @@ video {
 	--tw-scale-x: 1;
 	--tw-scale-y: 1;
 	transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-x-1\/2{
+	--tw-translate-x: -50%;
 }
 .resize{
 	resize: both;
@@ -1231,6 +1231,7 @@ video {
 }
 :root {
   --lightColor: #6e01f2;
+  --darkColor: #7510f7;
 }
 .primary-border-color{
 	--tw-border-opacity: 1;
@@ -1372,6 +1373,25 @@ canvas {
   100% {
     transform: translateY(-100%);
   }
+}
+.event-filter--item[data-selected="true"] {
+  background-color: var(--darkColor);
+  color: #fff;
+  border: unset;
+}
+.event-filter--item[data-selected="true"]:hover {
+  background-color: var(--lightColor);
+}
+.category-item[data-selected="true"]::before {
+  /* <div class="absolute h-1 w-full bg-primary top-0"> */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+
+  height: 4px;
+  width: 100%;
+  background-color: var(--lightColor);
 }
 .hover\:translate-y-2:hover{
 	--tw-translate-y: 0.5rem;

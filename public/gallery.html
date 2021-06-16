@@ -30,9 +30,16 @@
         : document.documentElement.classList.remove("dark");
     </script>
   </head>
-
-  <body class="relative font-sans antialiased dark:bg-gray-900 bg-primaryLight">
-    <!-- Mobile NAVBAR -->
+  <body
+    class="
+      relative
+      font-sans
+      antialiased
+      dark:bg-gray-900
+      bg-primaryLight
+      h-full
+    "
+  >
     <nav
       class="
         fixed
@@ -53,9 +60,8 @@
         /></a>
       </div>
       <div class="flex flex-row items-center">
-        <!-- light mode toggle mobile -->
-        <a href="#" id="theme-toggle-btn-mob" class="mr-2">
-          <svg
+        <a href="#" id="theme-toggle-btn-mob" class="mr-2"
+          ><svg
             class="light-toggle-mob"
             width="24"
             height="24"
@@ -89,9 +95,8 @@
               clip-rule="evenodd"
               d="M12.2256 2.00253C9.59172 1.94346 6.93894 2.9189 4.92893 4.92891C1.02369 8.83415 1.02369 15.1658 4.92893 19.071C8.83418 22.9763 15.1658 22.9763 19.0711 19.071C21.0811 17.061 22.0565 14.4082 21.9975 11.7743C21.9796 10.9772 21.8669 10.1818 21.6595 9.40643C21.0933 9.9488 20.5078 10.4276 19.9163 10.8425C18.5649 11.7906 17.1826 12.4053 15.9301 12.6837C14.0241 13.1072 12.7156 12.7156 12 12C11.2844 11.2844 10.8928 9.97588 11.3163 8.0699C11.5947 6.81738 12.2094 5.43511 13.1575 4.08368C13.5724 3.49221 14.0512 2.90664 14.5935 2.34046C13.8182 2.13305 13.0228 2.02041 12.2256 2.00253ZM17.6569 17.6568C18.9081 16.4056 19.6582 14.8431 19.9072 13.2186C16.3611 15.2643 12.638 15.4664 10.5858 13.4142C8.53361 11.362 8.73568 7.63895 10.7814 4.09281C9.1569 4.34184 7.59434 5.09193 6.34315 6.34313C3.21895 9.46732 3.21895 14.5326 6.34315 17.6568C9.46734 20.781 14.5327 20.781 17.6569 17.6568Z"
               fill="currentColor"
-            />
-          </svg>
-        </a>
+            /></svg
+        ></a>
         <a href="#" class="p-2 hamburger focus:outline-none"
           ><svg
             width="24"
@@ -111,9 +116,8 @@
             <path
               d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z"
               fill="currentColor"
-            />
-          </svg>
-        </a>
+            /></svg
+        ></a>
       </div>
       <ul
         class="
@@ -136,7 +140,6 @@
           nav-mob
         "
       >
-        <!-- <div class="absolute top-0 w-full h-2 bg-primaryLight"></div> -->
         <div class="flex flex-row justify-between">
           <span class="p-4 mb-3 text-sm tracking-wider text-gray-400 uppercase"
             >Navigation</span
@@ -155,7 +158,7 @@
               /></svg
           ></a>
         </div>
-        <li class="">
+        <li>
           <a
             href="/public/index.html"
             class="
@@ -172,21 +175,21 @@
             >Home</a
           >
         </li>
-        <li class="">
+        <li>
           <a
             href="/public/about.html"
             class="block w-full px-4 py-2 text-base tracking-wider capitalize"
             >About</a
           >
         </li>
-        <li class="">
+        <li>
           <a
             href="/public/gallery.html"
             class="block w-full px-4 py-2 text-base tracking-wider capitalize"
             >Gallery</a
           >
         </li>
-        <li class="">
+        <li>
           <a
             href="#"
             class="block w-full px-4 py-2 text-base tracking-wider capitalize"
@@ -215,10 +218,14 @@
 
     <!-- Desktop NAVBAR -->
     <nav
+      style="padding: 0 10%"
       class="
         fixed
         z-50
-        justify-center
+        justify-between
+        left-1/2
+        transform
+        -translate-x-1/2
         hidden
         w-full
         transition-all
@@ -228,15 +235,15 @@
         sticky-nav
       "
     >
-      <div class="w-1/5 pt-1 pb-0">
+      <div class="pt-1 pb-0">
         <a href="#" class="">
           <img src="/public/img/logo-white2.png" class="w-auto h-20" alt="" />
         </a>
       </div>
-      <ul class="flex flex-row justify-center w-2/5 p-3 pt-7">
+      <ul class="flex flex-row justify-center p-3 pt-7">
         <li class="mr-4 nav-link">
           <a
-            href="/public/index.html"
+            href="#"
             class="px-3 py-3 text-lg font-normal tracking-wider capitalize"
             >Home</a
           >
@@ -264,7 +271,7 @@
           >
         </li>
       </ul>
-      <div class="w-1/5 lg:items-center lg:justify-start lg:flex lg:flex-row">
+      <div class="lg:items-center lg:justify-start lg:flex lg:flex-row">
         <!-- Light mode Toggle Desktop -->
 
         <a
@@ -437,8 +444,7 @@
                 lg:h-52
                 bg-gray-50
               "
-            >
-              <div class="absolute h-1 w-full bg-primary top-0"></div>
+              ><div class="absolute h-1 w-full bg-primary top-0"></div>
               <img
                 src="/public/img/marriage.png"
                 class="object-cover object-center h-20 lg:py-2 lg:h-36"
@@ -756,6 +762,7 @@
               <div
                 style="scroll-behavior: smooth"
                 class="
+                  event-filter
                   box-content
                   w-full
                   h-full
@@ -773,7 +780,7 @@
                   dark:text-gray-50
                 "
               >
-                <a
+                <!-- <a
                   href="#"
                   class="
                     inline-block
@@ -863,7 +870,7 @@
                     dark:hover:text-gray-800
                   "
                   >2021 Utsav 1</a
-                >
+                > -->
               </div>
             </div>
             <h3>
@@ -1045,7 +1052,6 @@
     <script src="/node_modules/lightgallery/lightgallery.min.js"></script>
     <script src="/node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="/node_modules/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
-
     <script type="module" defer src="build/category.js"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@
 
 :root {
   --lightColor: #6e01f2;
+  --darkColor: #7510f7;
 }
 
 .primary-border-color {
@@ -146,4 +147,26 @@ canvas {
   100% {
     transform: translateY(-100%);
   }
+}
+
+.event-filter--item[data-selected="true"] {
+  background-color: var(--darkColor);
+  color: #fff;
+  border: unset;
+}
+
+.event-filter--item[data-selected="true"]:hover {
+  background-color: var(--lightColor);
+}
+
+.category-item[data-selected="true"]::before {
+  /* <div class="absolute h-1 w-full bg-primary top-0"> */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+
+  height: 4px;
+  width: 100%;
+  background-color: var(--lightColor);
 }
