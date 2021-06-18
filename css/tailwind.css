@@ -6,6 +6,7 @@
 :root {
   --lightColor: #6e01f2;
   --darkColor: #7510f7;
+  --plyr-color-main: #6e01f2;
 }
 
 .primary-border-color {
@@ -14,15 +15,14 @@
 .primary-light-bg {
   @apply bg-primaryLight;
 }
+.primary-bg {
+  @apply bg-primary;
+}
 .dark-gray-blue {
   @apply bg-darkGrayBlue;
 }
 .btn-more:hover i {
   transform: translateX(2px);
-}
-
-:root {
-  --plyr-color-main: #6e01f2;
 }
 
 @media (min-width: 1023px) {
@@ -150,13 +150,14 @@ canvas {
 }
 
 .event-filter--item[data-selected="true"] {
-  background-color: var(--darkColor);
+  @apply bg-primary;
   color: #fff;
   border: unset;
 }
 
 .event-filter--item[data-selected="true"]:hover {
-  background-color: var(--lightColor);
+  @apply bg-primaryLight;
+  color: #fff !important;
 }
 
 .category-item[data-selected="true"]::before {
@@ -168,5 +169,5 @@ canvas {
 
   height: 4px;
   width: 100%;
-  background-color: var(--lightColor);
+  @apply bg-primaryLight;
 }

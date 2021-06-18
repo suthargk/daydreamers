@@ -1,4 +1,4 @@
-import { stickyFunc } from "./navigation.js";
+import { stickyFunc, logo } from "./navigation.js";
 const genre = document.querySelector(".section-genre");
 const header = document.querySelector("header");
 const stickyNav = document.querySelector(".sticky-nav");
