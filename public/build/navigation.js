@@ -16,12 +16,6 @@ export function stickyFunc(type, targetElement, btn = undefined) {
   const stickyNavFunc = function (entries, observer) {
     const [entry] = entries;
     if (!entry.isIntersecting) {
-      console.log("h");
-      if (localStorage.theme === "dark") {
-        logo.src = "img/logo-white.png";
-      } else {
-        logo.src = "img/logo-dark.png";
-      }
       type.classList.add(
         "bg-white",
         "dark:bg-gray-800",
@@ -40,7 +34,6 @@ export function stickyFunc(type, targetElement, btn = undefined) {
         );
       }
     } else {
-      logo.src = "img/logo-white.png";
       type.classList.remove(
         "bg-white",
         // "opacity-95",
