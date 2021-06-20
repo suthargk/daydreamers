@@ -20,12 +20,15 @@ stickyFunc(stickyMob, header);
 const imageTarget = document.querySelectorAll("img[data-src]");
 
 const loadImg = function (entries, observer) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
+  // const [entry] = entries;
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
 
-  entry.target.src = entry.target.dataset.src;
-  entry.target.addEventListener("load", function () {
-    entry.target.classList.remove("image-filter");
+    entry.target.src = entry.target.dataset.src;
+    entry.target.addEventListener("load", function () {
+      entry.target.classList.remove("image-filter");
+    });
+    imgObserver.unobserve(entry.target);
   });
 };
 

@@ -1,11 +1,11 @@
 import {
+  logo,
   stickyFunc,
   stickyNav,
   stickyMob,
   ticketBtn,
-  logo,
 } from "./navigation.js";
-const sectionCategory = document.querySelector(".section--category");
+const sectionCategory = document.querySelector(".ffff");
 const categoryLeft = document.querySelector(".catergory-left");
 const categoryRight = document.querySelector(".catergory-right");
 const categories = document.querySelector(".categories");
@@ -18,48 +18,12 @@ const eventFilter = document.querySelector(".event-filter");
 stickyFunc(stickyNav, sectionCategory, ticketBtn);
 stickyFunc(stickyMob, sectionCategory);
 
-if (categories.scrollLeft === 0) categoryLeft.classList.add("text-gray-400");
-
-const scrollLeft = function () {
-  if (categories.scrollLeft === 0) {
-    categoryLeft.classList.add("text-gray-400");
-    categoryLeft.classList.remove("text-gray-800");
-  }
-  categoryRight.classList.add("text-gray-800");
-  categoryRight.classList.remove("text-gray-400");
-};
-
-const scrollRight = function () {
-  const calcScroll = Math.trunc(
-    categories.scrollWidth - categories.getBoundingClientRect().width
-  );
-  if (
-    calcScroll === categories.scrollLeft ||
-    calcScroll === categories.scrollLeft + 1
-  ) {
-    categoryRight.classList.add("text-gray-400");
-    categoryRight.classList.remove("text-gray-800");
-  }
-  categoryLeft.classList.add("text-gray-800");
-  categoryLeft.classList.remove("text-gray-400");
-};
-
-categories.addEventListener("scroll", function () {
-  scrollLeft();
-  scrollRight();
+categoryLeft.addEventListener("click", (e) => {
+  e.preventDefault();
 });
 
-categoryLeft.addEventListener("click", function (e) {
+categoryRight.addEventListener("click", (e) => {
   e.preventDefault();
-  // console.log(categories.scrollLeft);
-  scrollLeft();
-  categories.scrollLeft -= 200;
-});
-
-categoryRight.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollRight();
-  categories.scrollLeft += 200;
 });
 
 const eventCategory = {
@@ -69,6 +33,46 @@ const eventCategory = {
       { imgSrc: "picture11.jpeg", event: "2021_utsavs", createdAt: new Date() },
       {
         imgSrc: "picture12.jpeg",
+        event: "2022_wedding",
+        createdAt: new Date(),
+      },
+      {
+        imgSrc: "picture13.jpeg",
+        event: "2022_wedding",
+        createdAt: new Date(),
+      },
+      {
+        imgSrc: "picture14.jpeg",
+        event: "2024_wedding",
+        createdAt: new Date(),
+      },
+      {
+        imgSrc: "picture15.jpeg",
+        event: "2025_wedding",
+        createdAt: new Date(),
+      },
+      {
+        imgSrc: "picture16.jpeg",
+        event: "2026_wedding",
+        createdAt: new Date(),
+      },
+      {
+        imgSrc: "picture17.jpeg",
+        event: "2027_wedding",
+        createdAt: new Date(),
+      },
+      {
+        imgSrc: "picture11.jpeg",
+        event: "2028_wedding",
+        createdAt: new Date(),
+      },
+      {
+        imgSrc: "picture15.jpeg",
+        event: "2022_wedding",
+        createdAt: new Date(),
+      },
+      {
+        imgSrc: "picture15.jpeg",
         event: "2022_wedding",
         createdAt: new Date(),
       },
@@ -101,11 +105,11 @@ const eventCategory = {
   },
 };
 
-const lightboxGalleryConfig = function () {
-  lightGallery(lightgalleryContainer, {
-    plugins: [lgThumbnail],
-    speed: 500,
-    backgroundColor: "#000",
+const glightboxGalleryConfig = function () {
+  const lightbox = GLightbox({
+    selector: ".glightbox",
+    touchNavigation: true,
+    loop: true,
   });
 };
 
@@ -120,10 +124,10 @@ const renderEventCategories = function () {
       data-selected="${index === 0 ? true : false}"
       class="filter drop-shadow relative overflow-hidden category-item flex flex-col items-center justify-center 
       flex-grow-0 flex-shrink-0 overflow-hidden transition-all duration-300 transform rounded-lg shadow-lg w-36 
-      h-36 hover:scale-105 lg:w-52 lg:h-52 bg-gray-50 dark:bg-gray-300">
+      h-36 hover:scale-105 lg:w-52 lg:h-52 bg-gray-50 dark:bg-gray-100">
       
       </div><img src="/public/img/${eventCategory[category].imgSrc}"
-          class="object-cover object-center h-20 lg:py-2 lg:h-36"
+          class=" object-cover object-center h-20 lg:py-2 lg:h-36"
           draggable="false" alt="">
       <h4><span
               class="block font-semibold tracking-wide text-center text-gray-800 capitalize lg:font-bold">${category}</span>
@@ -144,9 +148,10 @@ const renderEventCategoriesImages = function (
   lightgalleryContainer.innerHTML = selectedEventfilter.reduce((acc, img) => {
     return (
       acc +
-      `<div data-src="/public/img/${img.imgSrc}" class="relative overflow-hidden rounded-md aspect-box">
-   <a class="absolute top-0 left-0 block h-full zoom">
-     <img src="/public/img/${img.imgSrc}" class="
+      `<div class="relative overflow-hidden rounded-md aspect-box">
+   <a href="/public/img/${img.imgSrc}" class="relative gallery-skeleton w-full glightbox absolute top-0 left-0 block h-full zoom ">
+     <img src="" data-src="/public/img/${img.imgSrc}" class="
+     category-image
            block
            object-cover object-center
            w-full
@@ -160,7 +165,7 @@ const renderEventCategoriesImages = function (
   }, "");
 
   // invoked lightbox gallery function
-  lightboxGalleryConfig();
+  glightboxGalleryConfig();
 };
 
 const setCategory = function (categoryName = eventCategoryKeys[0]) {
@@ -205,6 +210,7 @@ categoryContainer.addEventListener("click", function (e) {
   renderEventCategoriesImages(
     eventCategory[categoryItemSelected.dataset.category].lists
   );
+  lazyLoadingImages();
 });
 
 eventFilter.addEventListener("click", function (e) {
@@ -220,6 +226,7 @@ eventFilter.addEventListener("click", function (e) {
       ].lists.filter((list) => eventFilterItems.dataset.event === list.event)
     );
   }
+  lazyLoadingImages();
 });
 
 let allCategoryItems;
@@ -232,3 +239,30 @@ const init = function () {
   alleventFilterItems = eventFilter.querySelectorAll(".event-filter--item");
 };
 init();
+
+function lazyLoadingImages() {
+  const categoryImages = document.querySelectorAll(".category-image");
+  // console.log(categoryImages);
+
+  const categoryImageIntersection = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        let lazyImage = entry.target;
+        lazyImage.src = lazyImage.dataset.src;
+        const parent = lazyImage.parentElement;
+        lazyImage.addEventListener("load", () => {
+          parent.classList.add("hide-image-loader");
+        });
+
+        categoryImageIntersection.unobserve(lazyImage);
+      });
+    },
+    { root: null, threshold: 0.2 }
+  );
+
+  categoryImages.forEach((image) => {
+    categoryImageIntersection.observe(image);
+  });
+}
+lazyLoadingImages();

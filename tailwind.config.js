@@ -1,6 +1,7 @@
 module.exports = {
   purge: [
     "./public/*.html",
+    "./public/*/*.js",
     // mode: "layers",
     // content: ["./public/*.html"],
   ],

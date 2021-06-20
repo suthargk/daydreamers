@@ -16,12 +16,6 @@ export function stickyFunc(type, targetElement, btn = undefined) {
   const stickyNavFunc = function (entries, observer) {
     const [entry] = entries;
     if (!entry.isIntersecting) {
-      console.log("h");
-      if (localStorage.theme === "dark") {
-        logo.src = "img/logo-white.png";
-      } else {
-        logo.src = "img/logo-dark.png";
-      }
       type.classList.add(
         "bg-white",
         "dark:bg-gray-800",
@@ -40,7 +34,6 @@ export function stickyFunc(type, targetElement, btn = undefined) {
         );
       }
     } else {
-      logo.src = "img/logo-white.png";
       type.classList.remove(
         "bg-white",
         // "opacity-95",
@@ -101,7 +94,6 @@ window.addEventListener("load", () => {
     if (localStorage.theme === "dark") {
       light.classList.add("hidden");
       dark.classList.remove("hidden");
-
       root.style.setProperty("--lightColor", "white");
     } else {
       root.style.setProperty("--lightColor", "#6e01f2");
@@ -115,14 +107,12 @@ const themeToggleFunc = function (light, dark) {
   let audio = new Audio("/public/img/preview.mp3");
   audio.play();
   if (!localStorage.getItem("theme") || localStorage.theme === "light") {
-    logo.src = "img/logo-white.png";
     light.classList.add("hidden");
     dark.classList.remove("hidden");
     localStorage.theme = "dark";
     document.documentElement.classList.add("dark");
     root.style.setProperty("--lightColor", "white");
   } else if (localStorage.theme === "dark") {
-    logo.src = "img/logo-dark.png";
     light.classList.remove("hidden");
     dark.classList.add("hidden");
     localStorage.theme = "light";

@@ -7,20 +7,12 @@
     <meta name="description" content="" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/glightbox/dist/css/glightbox.css"
+    />
     <link rel="stylesheet" href="build/style.css" />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/node_modules/lightgallery/css/lightgallery.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/node_modules/lightgallery/css/lg-thumbnail.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/node_modules/lightgallery/css/lg-fullscreen.css"
-    />
+
     <link href="https://css.gg/css" rel="stylesheet" />
     <script>
       "dark" === localStorage.theme ||
@@ -30,7 +22,7 @@
         : document.documentElement.classList.remove("dark");
     </script>
   </head>
-  <body class="relative font-sans antialiased dark:bg-gray-900 bg-primaryLight">
+  <body class="relative font-sans antialiased dark:bg-gray-900">
     <nav
       class="
         fixed
@@ -234,7 +226,7 @@
       <ul class="flex flex-row justify-center p-3 pt-7">
         <li class="mr-4 nav-link">
           <a
-            href="#"
+            href="/public/index.html"
             class="px-3 py-3 text-lg font-normal tracking-wider capitalize"
             >Home</a
           >
@@ -310,7 +302,8 @@
         </a>
       </div>
     </nav>
-    <section class="section--category w-full h-screen pt-20">
+    <div class="h-24 w-full ffff bg-primaryLight"></div>
+    <section class="section--category w-full bg-primaryLight pb-6">
       <div
         class="
           flex flex-row
@@ -410,8 +403,6 @@
             "
           >
             <!-- Event Categories -->
-
-            <span style="min-width: 0.1px"></span>
           </div>
         </div>
         <div class="p-8 pt-3">
@@ -419,30 +410,56 @@
             <div
               class="relative h-12 px-8 mx-auto mb-10 overflow-hidden lg:w-1/2"
             >
-              <a
-                href="#"
-                class="
-                  absolute
-                  left-0
-                  inline-block
-                  rounded-full
-                  top-2
-                  catergory-left
-                "
-                ><i class="gg-arrow-left-o"></i
-              ></a>
-              <a
-                href="#"
-                class="
-                  absolute
-                  right-0
-                  inline-block
-                  rounded-full
-                  top-2.5
-                  catergory-right
-                "
-                ><i class="gg-arrow-right-o"></i
-              ></a>
+              <div
+                class="absolute left-0 flex items-center justify-center h-12"
+              >
+                <a
+                  href="#"
+                  class="rounded-full catergory-left flex h-full items-center"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.9481 14.8285L10.5339 16.2427L6.29122 12L10.5339 7.7574L11.9481 9.17161L10.1196 11H17.6568V13H10.1196L11.9481 14.8285Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.22183 19.7782C-0.0739419 15.4824 -0.0739419 8.51759 4.22183 4.22183C8.51759 -0.0739419 15.4824 -0.0739419 19.7782 4.22183C24.0739 8.51759 24.0739 15.4824 19.7782 19.7782C15.4824 24.0739 8.51759 24.0739 4.22183 19.7782ZM5.63604 18.364C2.12132 14.8492 2.12132 9.15076 5.63604 5.63604C9.15076 2.12132 14.8492 2.12132 18.364 5.63604C21.8787 9.15076 21.8787 14.8492 18.364 18.364C14.8492 21.8787 9.15076 21.8787 5.63604 18.364Z"
+                      fill="currentColor"
+                    /></svg
+                ></a>
+              </div>
+              <div
+                class="absolute right-0 flex items-center justify-center h-12"
+              >
+                <a
+                  href="#"
+                  class="rounded-full catergory-right flex h-full items-center"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.0519 14.8285L13.4661 16.2427L17.7088 12L13.4661 7.7574L12.0519 9.17161L13.8804 11H6.34321V13H13.8803L12.0519 14.8285Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.7782 19.7782C24.0739 15.4824 24.0739 8.51759 19.7782 4.22183C15.4824 -0.0739417 8.51759 -0.0739417 4.22183 4.22183C-0.0739417 8.51759 -0.0739417 15.4824 4.22183 19.7782C8.51759 24.0739 15.4824 24.0739 19.7782 19.7782ZM18.364 18.364C21.8787 14.8492 21.8787 9.15076 18.364 5.63604C14.8492 2.12132 9.15076 2.12132 5.63604 5.63604C2.12132 9.15076 2.12132 14.8492 5.63604 18.364C9.15076 21.8787 14.8492 21.8787 18.364 18.364Z"
+                      fill="currentColor"
+                    /></svg
+                ></a>
+              </div>
               <div
                 style="scroll-behavior: smooth"
                 class="
@@ -451,6 +468,7 @@
                   w-full
                   h-full
                   pb-4
+                  pt-1.5
                   mb-8
                   space-x-2
                   overflow-x-scroll overflow-y-hidden
@@ -503,10 +521,8 @@
       </div>
       <div class="text-gray-400 text-gray-800"></div>
     </section>
-
-    <script src="/node_modules/lightgallery/lightgallery.min.js"></script>
-    <script src="/node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
-    <script src="/node_modules/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="build/loading.js"></script>
+    <script src="/node_modules/glightbox/dist/js/glightbox.js"></script>
     <script type="module" defer src="build/category.js"></script>
   </body>
 </html>
