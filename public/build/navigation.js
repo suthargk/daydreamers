@@ -10,6 +10,7 @@ export const lightMob = document.querySelector(".light-toggle-mob");
 export const darkMob = document.querySelector(".dark-toggle-mob");
 export const navMob = document.querySelector(".nav-mob");
 export const logo = document.getElementById("logo");
+
 const root = document.querySelector(":root");
 
 export function stickyFunc(type, targetElement, btn = undefined) {
@@ -128,3 +129,10 @@ themeToggleBtnMob.addEventListener("click", (e) => {
   e.preventDefault();
   themeToggleFunc(lightMob, darkMob);
 });
+
+const ticketModal = function (e) {
+  e.preventDefault();
+  const modalMarkup = ``;
+};
+
+ticketBtn.addEventListener("click", ticketModal);
