@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Day Dreamers</title>
+
+    <!-- meta -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css files -->
+    <link rel="stylesheet" href="59408177ec6c4bf7c57bb638c94003ff">
+
+    <!-- css.gg -->
+    <link href="ee26aa3f92346964bdcd5491603f7aac" rel="stylesheet">
+    <script data-parcel-key="c0db9f70c3e38ae7ee2b22325ecf90ec">
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body class="relative font-sans antialiased dark:bg-gray-900 bg-primaryLight">
+    <script defer="" src="d40e25149a622b4f7f536e6553c97b36"></script>
+  </body>
+</html>

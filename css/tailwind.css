@@ -7,11 +7,13 @@
   --lightColor: #6e01f2;
   --darkColor: #7510f7;
   --plyr-color-main: #6e01f2;
+  --dottedColor: #3c4859;
 }
 
 .primary-border-color {
   @apply border-primary;
 }
+
 .primary-light-bg {
   @apply bg-primaryLight;
 }
@@ -21,23 +23,42 @@
 .dark-gray-blue {
   @apply bg-darkGrayBlue;
 }
-.btn-more:hover i {
+.btn-more:hover svg {
   transform: translateX(2px);
 }
 
 @media (min-width: 1023px) {
-  .section-genre::after {
+  .section-genre::after,
+  .section-testimonials::after,
+  .header-about::after {
     display: block;
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+
     width: 20%;
-    height: 100%;
-    background-image: radial-gradient(#3c4859 2px, transparent 0);
+
+    background-image: radial-gradient(var(--dottedColor) 2px, transparent 0);
     background-size: 20px 20px;
     background-position: 0 0;
-    opacity: 0.08;
+    opacity: 0.15;
+  }
+  .section-genre::after {
+    height: 75%;
+    left: 0;
+  }
+  .section-testimonials::after {
+    height: 50%;
+    right: 0;
+  }
+  .header-about::after {
+    position: absolute;
+    top: unset;
+    bottom: 0;
+    right: 0;
+    height: 40%;
+    background-image: radial-gradient(#fff 2px, transparent 0);
+    opacity: 0.4;
   }
 
   .top-custom {
@@ -48,15 +69,6 @@
 
 .vivid {
   filter: drop-shadow(0 0 1rem #f0eeee);
-}
-
-.bg-hero {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(51, 51, 153, 0.7),
-      rgba(255, 0, 204, 0.7)
-    ),
-    url("/public/img/hero.jpg");
 }
 
 .zoom:hover img {
@@ -81,18 +93,7 @@
   background-color: #6e01f2;
   border: 2px solid #6e01f2;
 }
-/* :root {
-  --color-primary-light: #6e01f2;
-  --color-primary: #7510f7;
-  --color-primary-night: #5f01d0;
-  --color-primary-darker: #5e07cd;
-  --color-primary-darkest: #48019d;
-  --color-gray-1: #f7fafc;
-  --color-gray-dark-1: #a0aec0;
-  --color-gray-dark-3: #141c3a;
 
-  --plyr-color-main: #6e01f2;
-} */
 .nav-link::before {
   content: "";
   display: block;
@@ -152,7 +153,7 @@ canvas {
 .event-filter--item[data-selected="true"] {
   @apply bg-primary;
   color: #fff;
-  border: unset;
+  @apply border-primary;
 }
 
 .event-filter--item[data-selected="true"]:hover {
@@ -160,16 +161,9 @@ canvas {
   color: #fff !important;
 }
 
-.category-item[data-selected="true"]::before {
-  /* <div class="absolute h-1 w-full bg-primary top-0"> */
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-
-  height: 4px;
-  width: 100%;
-  @apply bg-primaryLight;
+.category-item[data-selected="true"] {
+  border: 2px solid #6e01f2;
+  transition: all 0.3s;
 }
 
 .gallery-skeleton:not(.hide-image-loader)::before {
@@ -204,27 +198,48 @@ canvas {
   transform: scale(1.1);
 }
 
-.catergory-left::after,
-.catergory-right::before {
+.catergory-left,
+.catergory-right {
   height: 100%;
   width: 50px;
   content: "";
-  display: flex;
   pointer-events: none;
 }
 
-.catergory-left::after {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.98) 20%,
-    rgba(255, 255, 255, 0) 80%
-  );
+.timeline {
+  background: rgba(0, 0, 0, 0.295);
 }
 
-.catergory-right::before {
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0.98) 20%,
-    rgba(255, 255, 255, 0) 80%
-  );
+/* Slick css */
+.slick-next {
+  right: -1rem;
+}
+
+.slick-dots li {
+  width: 1rem;
+  height: 1rem;
+}
+.slick-dots li button {
+  width: 1rem;
+  height: 1rem;
+}
+
+.slick-dots li button:before {
+  content: "";
+  background-color: #6e01f2;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: #6e01f2;
+  border: 2px solid #6e01f2;
+  opacity: 0.85;
+  height: 1rem;
+  width: 1rem;
+}
+
+.slick-list {
+  padding: 1rem;
 }
