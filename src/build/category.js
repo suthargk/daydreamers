@@ -51,7 +51,7 @@ const eventCategory = {
   marriage: {
     imgSrc: "marriage.png",
     lists: [
-      { event: "all" },
+      // { event: "all" },
       { imgSrc: "picture11.jpeg", event: "2021_utsavs", createdAt: new Date() },
       {
         imgSrc: "picture12.jpeg",

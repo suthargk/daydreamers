@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       rel="stylesheet"
-      href="../node_modules/glightbox/dist/css/glightbox.css"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
     <link rel="stylesheet" href="./build/style.css" />
     <script>
@@ -21,18 +21,7 @@
   <body class="relative font-sans antialiased dark:bg-gray-900">
     <!-- Mobile NAVBAR -->
     <nav
-      class="
-        fixed
-        z-40
-        flex flex-row
-        items-center
-        justify-between
-        w-full
-        px-6
-        lg:hidden
-        stick-mobile
-        text-gray-50
-      "
+      class="fixed z-40 flex flex-row items-center justify-between w-full px-6 lg:hidden stick-mobile text-gray-50"
     >
       <div class="my-2 ml-2">
         <a href="#"
@@ -103,25 +92,7 @@
         </a>
       </div>
       <ul
-        class="
-          absolute
-          z-50
-          flex-col
-          justify-center
-          hidden
-          w-11/12
-          overflow-hidden
-          text-gray-500
-          bg-gray-50
-          rounded-md
-          shadow-xl
-          dark:text-gray-50
-          dark:bg-gray-800
-          filter
-          drop-shadow
-          top-1/4
-          nav-mob
-        "
+        class="absolute z-50 flex-col justify-center hidden w-11/12 overflow-hidden text-gray-500 bg-gray-50 rounded-md shadow-xl dark:text-gray-50 dark:bg-gray-800 filter drop-shadow top-1/4 nav-mob"
       >
         <!-- <div class="absolute top-0 w-full h-2 bg-primaryLight"></div> -->
         <div class="flex flex-row justify-between">
@@ -145,17 +116,7 @@
         <li class="">
           <a
             href="index.html"
-            class="
-              block
-              w-full
-              px-4
-              py-2
-              text-base
-              font-medium
-              tracking-wider
-              capitalize
-              text-primaryLight
-            "
+            class="block w-full px-4 py-2 text-base font-medium tracking-wider capitalize text-primaryLight"
             >Home</a
           >
         </li>
@@ -183,17 +144,7 @@
         <li>
           <a
             href="#"
-            class="
-              block
-              px-3
-              py-2
-              mt-2
-              font-normal
-              tracking-wide
-              text-center text-white
-              uppercase
-              bg-primary
-            "
+            class="block px-3 py-2 mt-2 font-normal tracking-wide text-center text-white uppercase bg-primary"
             >Buy tickets</a
           >
         </li>
@@ -203,21 +154,7 @@
     <!-- Desktop NAVBAR -->
     <nav
       style="padding: 0.5% 10%"
-      class="
-        fixed
-        z-40
-        justify-between
-        left-1/2
-        transform
-        -translate-x-1/2
-        hidden
-        w-full
-        transition-all
-        duration-300
-        lg:flex lg:flex-row
-        text-gray-50
-        sticky-nav
-      "
+      class="fixed z-40 justify-between left-1/2 transform -translate-x-1/2 hidden w-full transition-all duration-300 lg:flex lg:flex-row text-gray-50 sticky-nav"
     >
       <div class="">
         <a href="#" class="">
@@ -305,25 +242,10 @@
     </nav>
     <div class="h-24 w-full ffff bg-primaryLight dark:bg-darkthemeBlue"></div>
     <section
-      class="
-        section--category
-        w-full
-        bg-primaryLight
-        dark:bg-darkthemeBlue
-        pb-6
-      "
+      class="section--category w-full bg-primaryLight dark:bg-darkthemeBlue pb-6"
     >
       <div
-        class="
-          flex flex-row
-          items-center
-          justify-between
-          w-11/12
-          lg:w-4/5
-          h-32
-          mx-auto
-          mb-4
-        "
+        class="flex flex-row items-center justify-between w-11/12 lg:w-4/5 h-32 mx-auto mb-4"
       >
         <div class="pl-4 lg:pl-0">
           <h2 class="text-gray-50">
@@ -331,14 +253,7 @@
               >Events</span
             >
             <span
-              class="
-                block
-                text-lg
-                font-semibold
-                tracking-wider
-                text-gray-100
-                capitalize
-              "
+              class="block text-lg font-semibold tracking-wider text-gray-100 capitalize"
               >a Few of our recent events</span
             >
           </h2>
@@ -364,49 +279,18 @@
         </div>
       </div>
       <div
-        class="
-          z-10
-          w-11/12
-          lg:w-4/5
-          mx-auto
-          mb-6
-          -mt-6
-          overflow-hidden
-          bg-white
-          rounded-3xl
-          dark:bg-gray-900
-        "
+        class="z-10 w-11/12 lg:w-4/5 mx-auto mb-6 -mt-6 overflow-hidden bg-white rounded-3xl dark:bg-gray-900"
       >
         <div class="p-8">
           <h3 class="mb-6">
             <span
-              class="
-                pb-1
-                text-lg
-                font-semibold
-                border-b-2
-                dark:text-gray-50
-                dark:border-gray-50
-                lg:font-bold
-                text-primaryLight
-                border-primary
-              "
+              class="pb-1 text-lg font-semibold border-b-2 dark:text-gray-50 dark:border-gray-50 lg:font-bold text-primaryLight border-primary"
               >Featured style</span
             >
           </h3>
           <div
             id="category-container"
-            class="
-              flex
-              p-4
-              space-x-4
-              overflow-x-scroll
-              bg-gray-200
-              rounded-lg
-              shadow-inner
-              flex-nowrap
-              dark:bg-gray-800
-            "
+            class="flex p-4 space-x-4 overflow-x-scroll bg-gray-200 rounded-lg shadow-inner flex-nowrap dark:bg-gray-800"
           >
             <!-- Event Categories -->
           </div>
@@ -418,86 +302,33 @@
                 class="absolute -left-3 flex items-center justify-center h-12"
               >
                 <div
-                  class="
-                    catergory-left
-                    bg-category-left
-                    dark:bg-category-left-dark
-                    flex
-                    h-full
-                    items-center
-                    text-gray-500
-                  "
+                  class="catergory-left bg-category-left dark:bg-category-left-dark flex h-full items-center text-gray-500"
                 ></div>
               </div>
               <div
                 class="absolute -right-3 flex items-center justify-center h-12"
               >
                 <div
-                  class="
-                    catergory-right
-                    dark:bg-catergory-right-dark
-                    bg-category-right
-                    flex
-                    h-full
-                    items-center
-                    text-gray-500
-                  "
+                  class="catergory-right dark:bg-catergory-right-dark bg-category-right flex h-full items-center text-gray-500"
                 ></div>
               </div>
               <div
                 style="scroll-behavior: smooth"
-                class="
-                  event-filter
-                  box-content
-                  w-full
-                  h-full
-                  pb-4
-                  pt-1.5
-                  mb-8
-                  space-x-2
-                  overflow-x-scroll overflow-y-hidden
-                  lg:space-x-3
-                  categories
-                  whitespace-nowrap
-                  tracking-tight
-                  lowercase
-                  leading-6
-                  text-gray-800
-                  dark:text-gray-800
-                "
+                class="event-filter box-content w-full h-full pb-4 pt-1.5 mb-8 space-x-2 overflow-x-scroll overflow-y-hidden lg:space-x-3 categories whitespace-nowrap tracking-tight lowercase leading-6 text-gray-800 dark:text-gray-800"
               >
                 <!-- Event category filters -->
               </div>
             </div>
             <h3>
               <span
-                class="
-                  inline-block
-                  pb-1
-                  text-lg
-                  font-semibold
-                  border-b-2
-                  lg:font-bold
-                  dark:text-gray-50
-                  dark:border-gray-50
-                  text-primaryLight
-                  border-primary
-                "
+                class="inline-block pb-1 text-lg font-semibold border-b-2 lg:font-bold dark:text-gray-50 dark:border-gray-50 text-primaryLight border-primary"
                 >Photos</span
               >
             </h3>
           </div>
           <div
             id="lightgallery"
-            class="
-              grid grid-cols-2
-              gap-1
-              mb-4
-              lg:grid-cols-5
-              lg:gap-4
-              auto-rows-auto
-              lg:my-5
-            "
+            class="grid grid-cols-2 gap-1 mb-4 lg:grid-cols-5 lg:gap-4 auto-rows-auto lg:my-5"
           >
             <!-- Gallery Images -->
           </div>
@@ -505,7 +336,7 @@
       </div>
     </section>
     <script src="./build/loading.js"></script>
-    <script src="/node_modules/glightbox/dist/js/glightbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script type="module" defer src="./build/category.js"></script>
   </body>
 </html>
